@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/homeStyle.css">
+    <title>Address Book Home</title>
+    <style>
+        /* Fade-in animation for header and main content */
+        .header-content, .main-content {
+            opacity: 0;
+            animation: fade-in 0.8s forwards;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header-content header">
+        <div class="logo-content">
+            <img src="../assets/img.jpg">
+            <div>
+                <span class="add-text">ADDRESS</span><br>
+                <span class="add-text add-book">BOOK</span>
+            </div>
+        </div>
+    </header>
+    <div class="main-content">
+        <div class="header-content">
+            <div class="address-book-text">
+                Person Details <div class="person-count">0</div>
+            </div>
+            <a href="../pages/AddressBookApp.html" class="add-button">
+                <img src="../assets/add-24px.svg" alt="add">Add Person</a>
+        </div>
+        <table id="display" class="table"></table>
+    </div>
+    <script src="../js/home.js"></script>
+    <script src="../js/eventListener.js"></script>
+    <script src="../js/site_properties.js"></script>
+    <script src="../js/addressBook.js"></script>
+</body>
+</html>
